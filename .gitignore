@@ -1,0 +1,23 @@
+# Nix result links
+result
+result-*
+
+# Flake lock file (Optional to ignore, but usually kept for stability. 
+# Keeping it for now as per Nix best practices for top-level flakes)
+# flake.lock
+
+# Direnv
+.direnv
+
+# Vim swap files
+*.swp
+
+# Reference repositories (now that we are externalizing)
+.wrappers_repo
+.ricing_mats
+.Vimjoyer_BOK
+.Vimjoyer_nixconf
+.stylix_repo
+.flake-parts_repo
+.vimjoyer-gaming-video_repo
+.wlr-which-key_repo
