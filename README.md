@@ -10,7 +10,7 @@ This configuration follows the "Dendritic" (branch-like) structure inspired by *
 
 ## Key stuff
 - **[Niri](https://github.com/YaLTeR/niri):** A scrollable tiling Wayland compositor.
-- **[Stylix](https://github.com/danth/stylix):** The "Single Source of Truth" for system-wide theming (Colors, Fonts, Wallpaper).
+- **[Stylix](https://github.com/danth/stylix):** For system-wide theming (Colors, Fonts, Wallpaper).
 - **[Wrappers](https://github.com/Lassulus/wrappers):** Eliminates "dotfile litter" by baking configurations directly into the program binaries.
 - **[NH (Nix Helper)](https://github.com/viperML/nh):** Provides a "comfy" CLI for system switching and maintenance.
 
