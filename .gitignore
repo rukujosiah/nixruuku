@@ -13,11 +13,5 @@ result-*
 *.swp
 
 # Reference repositories (now that we are externalizing)
-.wrappers_repo
-.ricing_mats
 .Vimjoyer_BOK
 .Vimjoyer_nixconf
-.stylix_repo
-.flake-parts_repo
-.vimjoyer-gaming-video_repo
-.wlr-which-key_repo
