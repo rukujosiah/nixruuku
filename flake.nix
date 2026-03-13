@@ -34,10 +34,11 @@
         ./modules/nixos/alacritty.nix
         ./modules/nixos/starship.nix
         ./modules/nixos/kitty.nix
-        ./modules/nixos/fastfetch.nix
+        ./modules/nixos/fastfetch-dynamic.nix
         ./modules/nixos/btop.nix
         ./modules/nixos/fuzzel.nix
         ./modules/nixos/wlr-which-key.nix
+        ./modules/nixos/taskbook.nix
       ];
 
       flake.nixosConfigurations.nixruuku = inputs.nixpkgs.lib.nixosSystem {

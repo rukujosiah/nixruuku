@@ -80,10 +80,9 @@
           "Mod+Return" = { spawn = "alacritty"; _attrs = { hotkey-overlay-title = "Open a Terminal: alacritty"; }; };
           "Mod+D" = {
             spawn-sh = self.mkWhichKeyExe pkgs [
-              { key = "d"; desc = "Fuzzel"; cmd = "fuzzel"; }
               { key = "f"; desc = "Firefox"; cmd = "firefox"; }
-              { key = "y"; desc = "Yazi"; cmd = "kitty yazi"; }
               { key = "b"; desc = "Btop"; cmd = "alacritty -e btop"; }
+              # { key = "t"; desc = "Taskbook"; cmd = "alacritty -e tb"; }
             ];
             _attrs = { hotkey-overlay-title = "Launch Menu"; };
           };

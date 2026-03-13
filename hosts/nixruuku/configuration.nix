@@ -13,9 +13,10 @@
       inputs.self.nixosModules.alacritty
       inputs.self.nixosModules.starship
       inputs.self.nixosModules.kitty
-      inputs.self.nixosModules.fastfetch
+      inputs.self.nixosModules.fastfetch-dynamic
       inputs.self.nixosModules.btop
       inputs.self.nixosModules.fuzzel
+      inputs.self.nixosModules.taskbook
       ../../modules/nixos/theme.nix
       ../../modules/nixos/gaming.nix
       ../../modules/nixos/japanese.nix

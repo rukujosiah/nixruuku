@@ -6,7 +6,7 @@ A highly modular, portable, and build-time validated NixOS configuration using t
 This configuration follows the "Dendritic" (branch-like) structure inspired by **Vimjoyer**. It uses `flake-parts` to modularize every aspect of the system.
 
 - **Centralized Nutrients:** Global variables like the **Cirno Color Palette** and system fonts are defined in `modules/theme.nix` and shared across all modules.
-- **Self-Contained Branches:** Programs like Niri, Ghostty, and Btop are defined as independent modules that contain both their **Package** (wrapped binary) and their **NixOS Service** configuration.
+- **Self-Contained Branches:** Programs are defined as independent modules that contain both their **Package** (wrapped binary) and their **NixOS Service** configuration.
 
 ## Key stuff
 - **[Niri](https://github.com/YaLTeR/niri):** A scrollable tiling Wayland compositor.
