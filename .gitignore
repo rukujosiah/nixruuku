@@ -6,12 +6,6 @@ result-*
 # Keeping it for now as per Nix best practices for top-level flakes)
 # flake.lock
 
-# Direnv
-.direnv
-
-# Vim swap files
-*.swp
-
 # Reference repositories (now that we are externalizing)
 .Vimjoyer_BOK
 .Vimjoyer_nixconf
