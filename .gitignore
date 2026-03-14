@@ -9,4 +9,4 @@ result-*
 # Reference repositories (now that we are externalizing)
 .Vimjoyer_BOK
 .Vimjoyer_nixconf
-.gemini
+.llm_workflow

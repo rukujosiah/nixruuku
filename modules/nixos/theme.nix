@@ -2,14 +2,14 @@
 
 {
   stylix.enable = true;
-  stylix.image = ../../config/niri/wall.png;
+  stylix.image = ../../mats/wall.png;
   stylix.polarity = "dark";
 
   # Use centralized theme from flake
   stylix.base16Scheme = inputs.self.theme;
 
   stylix.cursor.package = pkgs.bibata-cursors;
-  stylix.cursor.name = "Bibata-Modern-Ice";
+  stylix.cursor.name = "Cirno";
   stylix.cursor.size = 24;
 
   stylix.fonts = {
