@@ -15,8 +15,8 @@
       inherit pkgs;
       settings = {
         main = {
-          font = "JetBrainsMono Nerd Font:size=17";
-          terminal = "alacritty -e";
+          font = "${self.fonts.monospace}:size=17";
+          terminal = "${self.packages.${pkgs.stdenv.hostPlatform.system}.myTerminal}/bin/kitty -e";
           prompt = "> ";
           layer = "overlay";
           lines = 15;

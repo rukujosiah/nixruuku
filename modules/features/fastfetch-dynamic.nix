@@ -1,18 +1,15 @@
-{ inputs, self, ... }: {
+{ self, ... }: {
   perSystem = { pkgs, ... }: 
   let
-    inherit (self) theme;
-    
     # logo reference path
     logoImg = ./../../mats/cirnos-logo.png;
 
-    # Dynamic configuration using centralized Nutrients
+    # Dynamic configuration
     ffConfig = pkgs.writeText "config.jsonc" (builtins.toJSON {
       "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
       logo = {
         "type" = "file";
-        "source" = ""; # Overridden by command line
-        # "padding" = { "right" = 4; };
+        "source" = ""; 
       };
       "display" = { "separator" = " : "; };
       modules = [
@@ -38,27 +35,19 @@
       ];
     });
 
-    ffScript = pkgs.writeShellScriptBin "ff" ''
-      # Create a safe temporary file and ensure cleanup
+    ffScript = pkgs.writeShellScriptBin "fastfetch" ''
       TEMP_ASCII=$(mktemp --suffix=.txt)
       trap 'rm -f "$TEMP_ASCII"' EXIT
-
-      # Generate fresh ASCII and save to temp file
       ${pkgs.chafa}/bin/chafa --symbols braille --format symbols -c full --size 50x25 --dither none --fg-only "${logoImg}" > "$TEMP_ASCII"
-
-      # Execute fastfetch using the temp file as logo
-      ${pkgs.fastfetch}/bin/fastfetch --logo "$TEMP_ASCII" --config "${ffConfig}"
+      ${pkgs.fastfetch}/bin/fastfetch --logo "$TEMP_ASCII" --config "${ffConfig}" "$@"
     '';
   in {
-    packages.fastfetch-dynamic = ffScript;
+    packages.fastfetch = ffScript;
   };
 
   flake.nixosModules.fastfetch-dynamic = { pkgs, ... }: {
     environment.systemPackages = [
-      self.packages.${pkgs.stdenv.hostPlatform.system}.fastfetch-dynamic
-      pkgs.fastfetch
-      pkgs.chafa
-      pkgs.imagemagick
+      self.packages.${pkgs.stdenv.hostPlatform.system}.fastfetch
     ];
   };
 }
